@@ -1,0 +1,99 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 20px 40px 20px;
+}
+
+#form-btn{
+    margin-top: 30px;
+    align-self: center;
+    color: white;
+    background-color: #0b548d;
+    border: none;
+    padding: 15px 30px;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    font-family: 'Work Sans', sans-serif;
+}
+#form-btn:hover{
+    cursor: pointer;
+    background-color: #07375b;
+}
+#forms{
+    width: 100%;
+}
+
+#forms>input{
+    background-color: rgba(255, 255, 255, 0);
+    width: 95%;
+    padding: 15px 0 15px 30px;
+    border: solid #cbcbcb 1px;
+    color: rgb(29, 68, 119);
+}
+
+#forms>input::placeholder{
+    color: rgb(29, 68, 119);
+    font-family: 'Work Sans', sans-serif;
+}
+#forms>textarea{
+    background-color: rgba(255, 255, 255, 0);
+    width: 95%;
+    padding: 15px 0 15px 30px;
+    border: solid #cbcbcb 1px;
+}
+#forms>textarea::placeholder{
+    color: rgb(29, 68, 119);
+    font-family: 'Work Sans', sans-serif;
+}
+
+@media screen and (min-width: 770px) and (max-width: 1140px)  {
+    .form-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 40px 20px 40px 20px;
+    }
+    #forms{
+        width: 45%;
+    }
+    
+    #forms>input{
+        background-color: rgba(255, 255, 255, 0);
+        width: 100%;
+        padding: 15px 0 15px 30px;
+        border: solid #cbcbcb 1px;
+        color: rgb(29, 68, 119);
+    }
+
+    #forms>textarea{
+        background-color: rgba(255, 255, 255, 0);
+        width: 100%;
+        padding: 15px 0 15px 30px;
+        border: solid #cbcbcb 1px;
+    }
+}
+@media screen and (min-width: 1140px){
+    .form-container{
+        padding-top: 50px;
+    }
+    #forms>input{
+        padding: 30px 0 30px 30px;
+    }
+    
+    #forms>input::placeholder{
+        font-size: 1.6rem;
+    }
+    #forms>textarea{
+        padding: 30px 0 60px 30px;
+    }
+    #forms>textarea::placeholder{
+        font-size: 1.6rem;
+    }
+    .form-container{
+        gap: 40px;
+    }
+}

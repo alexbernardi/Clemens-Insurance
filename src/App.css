@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+html{
+  font-size: 62.5%;
+  overflow-y: overlay;
+}
+
+body{
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+a {
+  color: white;
+  text-decoration: none; /* no underline */
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  position: absolute;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff7e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #050b0f78;
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000be;
+}
+

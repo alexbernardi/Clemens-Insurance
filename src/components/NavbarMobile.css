@@ -1,0 +1,449 @@
+@media screen and (max-width: 1140px) {
+
+    
+    
+
+@media screen and (max-width: 440px) {
+    .logo-container{
+        max-width: 220px;
+    }
+    .nav-menu-active{
+        top: 62px;
+    }
+    
+}
+
+@media screen and (min-width: 441px) and (max-width: 640px ) {
+    .logo-container{
+        max-width: 50%;
+    }
+    .nav-menu-active{
+        top: 70px;
+    }
+    
+}
+
+@media screen and (min-width: 641px ) {
+    .logo-container{
+        max-width: 320px;
+    }
+    .nav-menu-active{
+        top: 82px;
+    }
+    
+}
+
+
+/* start of navbar top */
+
+/* stop all navbar animations on pageload */
+
+#preload *{
+    animation-duration: 0s;
+    -webkit-animation-duration: 0s;
+    transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s;}
+
+/*  */
+
+.navbar-mobile{
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+
+
+.navbar-wrapper{
+    background-color: #f7f8fa;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar-logo{
+    width: 100%;
+    height: auto;
+    padding: 10px 0 12px 20px;
+}
+
+/* end of navbar top */
+/* start of navbar dropdown */
+
+/* need navbar dropdown animations. place here */
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes growUp{
+    100% {
+        transform: scaleY(0);
+    }
+
+    0% {
+        transform: scaleY(1);
+    }
+}
+
+/* need navbar dropdown animations. place here */
+.nav-menu{
+    position: absolute;
+    background-color: rgb(0, 68, 120);
+    animation-name: growUp;
+    animation-duration: .5s;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    transform-origin: top center;
+    transform: scaleY(0);
+    z-index: 2;
+}
+.nav-menu>*{
+    display: none;
+}
+.nav-menu-active{
+    display: block;
+    position: relative;
+    height: 100vh;
+    top: 0;
+    background-color:rgb(0, 68, 120);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: normal;
+    animation-name: growDown;
+    animation-duration: .5s;
+    transform-origin: top center;
+    font-size: 1.8rem;
+    z-index: 2;
+}
+
+
+/* dropdown nav sections 3 sections with slightly different styling */
+
+/* nav-sections animations */
+
+@keyframes growDownSections {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    20% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.nav-sections-active{
+    animation-name: growDownSections;
+    animation-duration: 1.5s;
+}
+
+/* end animation */
+.nav-sections{
+    color: #f7f8fa;
+    padding: 35px 0 35px 35px;
+    width: 100vw;
+}
+
+.nav-sections-2{
+    background-color: rgb(198, 48, 58) ;  
+}
+.nav-sections-3{
+    background-color: rgb(0, 68, 120) ;  
+}
+
+
+.nav-section-containers{
+    display: flex;
+    flex-direction: column;
+    gap: 30px  ;
+}
+.nav-sections-1-a{
+    font-size: 1.8rem;
+    color: #f7f8fa;
+}
+
+.nav-sections-2-a{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 15px ;
+}
+
+.navbar-icons{
+    font-size: 2.4rem;
+    color: #f7f8fa;
+}
+
+/* internal menu styling */
+
+/* arrow animation */
+
+@keyframes arrowUpAnimation{
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes arrowDownAnimation{
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.arrow-up{
+    animation-name: arrowUpAnimation;
+    animation-duration: .4s;
+    transform: rotate(180deg);
+}
+.arrow-down{
+    animation-name: arrowDownAnimation;
+    animation-duration: .4s;
+    transform: rotate(0);
+}
+
+/* end arrow animation */
+.internal-dropdown-top-wrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.internal-dropdown{
+    position: relative;
+}
+
+.internal-menu{
+    position: absolute;
+    display: none;
+}
+
+.internal-menu-active{
+    display: flex;
+    padding: 10px 12px 10px 12px;
+    margin: 20px 10px 10px 10px;
+    flex-direction: column;
+    gap: 25px;
+    border-left: 3px #f7f8fa solid;
+}
+.internal-menu-active>li>a{
+    font-size: 1.6rem;
+}
+
+/* CSR 24 */
+
+.customer-access-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.csr-24-text{
+    font-style: italic;
+    font-size: 1.6rem
+}
+
+.nav-callus{
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.giveus-call{
+    font-weight: normal;
+}
+
+.callus-icon{
+    font-size: 2rem;
+}
+
+/* social media links */
+
+.social-media-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-media-icons{
+    font-size: 2rem;
+}
+/* hamburger animation */
+.icon-wrapper{
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+    position: relative;
+    z-index: 4;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .btn-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    cursor: pointer;
+  }
+  
+  .box>div>span {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    height: 4px;
+    background: rgb(0, 68, 120);
+    transition: all .3s;
+    position: relative;
+  }
+  
+  span + span {
+    margin-top: 7px;
+  }
+  
+  .active span:nth-child(1) {
+    animation: ease .7s top forwards;
+  }
+  
+  .not-active span:nth-child(1) {
+    animation: ease .7s top-2 forwards;
+  }
+  
+  .active span:nth-child(2) {
+    animation: ease .7s scaled forwards;
+  }
+  
+  .not-active span:nth-child(2) {
+    animation: ease .7s scaled-2 forwards;
+  }
+  
+  .active span:nth-child(3) {
+    animation: ease .7s bottom forwards;
+  }
+  
+  .not-active span:nth-child(3) {
+    animation: ease .7s bottom-2 forwards;
+  }
+  
+  @keyframes top {
+    0% {
+      top: 0;
+      transform: rotate(0);
+    }
+    50% {
+      top: 11px;
+      transform: rotate(0);
+    }
+    100% {
+      top: 11px;
+      transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes top-2 {
+    0% {
+      top: 11px;
+      transform: rotate(45deg);
+    }
+    50% {
+      top: 11px;
+      transform: rotate(0deg);
+    }
+    100% {
+      top: 0;
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes bottom {
+    0% {
+      bottom: 0;
+      transform: rotate(0);
+    }
+    50% {
+      bottom: 11px;
+      transform: rotate(0);
+    }
+    100% {
+      bottom: 11px;
+      transform: rotate(135deg);
+    }
+  }
+  
+  @keyframes bottom-2 {
+    0% {
+      bottom: 11px;
+      transform: rotate(135deg);
+    }
+    50% {
+      bottom: 11px;
+      transform: rotate(0);
+    }
+    100% {
+      bottom: 0;
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes scaled {
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes scaled-2 {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+}
+
+/* end of navbar dropdown */
+
+
+
